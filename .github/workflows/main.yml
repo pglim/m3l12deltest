@@ -6,7 +6,7 @@ on:
     branches: [ main, "*" ]
 
 jobs:
-  pre-deploy: #job name(can be any name,which will appear on the github action page/pipeline)
+  pre-deploystep1: #job name(can be any name,which will appear on the github action page/pipeline)
     runs-on: ubuntu-latest
     steps:
       - run: echo "The job is automatically triggerd by a ${{ github.event_name }} event."
