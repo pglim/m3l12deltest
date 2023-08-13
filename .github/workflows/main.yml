@@ -11,14 +11,14 @@ jobs:
     steps:
       - run: echo "The job is automatically triggerd by a ${{ github.event_name }} event."
 
-#  install-dependencies:
-#    runs-on: ubuntu-latest
-#    needs: pre-deploy
-#    steps:
-#      - name: Checkout repository code
-#        uses: actions/checkout@v3
-#      - name: Run installation of dependencies command
-#        run: npm install
+  install-dependenciesstep2:
+    runs-on: ubuntu-latest
+    needs: pre-deploystep1
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - name: Run installation of dependencies command
+        run: npm install
 
 #  unit-testing:
 #    runs-on: ubuntu-latest
