@@ -49,3 +49,11 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+        uses: dkershner6/aws-ssm-getparameters-action@v1
+        with:
+          parameterPairs: "/region/primary = PRIMARY_AWS_REGION,
+          /accountAlias = AWS_ACCOUNT_ALIAS"
+      # The part before equals is the ssm parameterName, and after is the ENV Variable name for the workflow.
+      # No limit on number of parameters. You can put new lines and spaces in as desired, they get trimmed out.
+          withDecryption: "true" # defaults to true
