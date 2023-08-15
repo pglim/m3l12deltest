@@ -49,11 +49,11 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        Parameter:
-          Name: pglim360parameter
-          Type: String
-          Value: file
-          Version: 2
-          LastModifiedDate: 1692100383.712
-          ARN: arn:aws:ssm:ap-southeast-1:255945442255:parameter/pglim360parameter
-          DataType: text
+        #Parameter:
+         # Name: pglim360parameter
+          #Type: String
+          #Value: file
+          #Version: 2
+          #LastModifiedDate: 1692100383.712
+          #ARN: arn:aws:ssm:ap-southeast-1:255945442255:parameter/pglim360parameter
+          #DataType: text
