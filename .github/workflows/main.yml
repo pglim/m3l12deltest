@@ -57,3 +57,5 @@ jobs:
           #LastModifiedDate: 1692100383.712
           #ARN: arn:aws:ssm:ap-southeast-1:255945442255:parameter/pglim360parameter
           #DataType: text
+snyk test
+snyk monitor
