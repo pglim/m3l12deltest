@@ -57,5 +57,13 @@ jobs:
           #LastModifiedDate: 1692100383.712
           #ARN: arn:aws:ssm:ap-southeast-1:255945442255:parameter/pglim360parameter
           #DataType: text
-snyk monitor --all-projects --org=snyk-apps
-snyk test --all-projects --org=snyk-apps --severity-threshold=high
+      - name: Set up Node 14
+        uses: actions/setup-node@v3
+        with:
+        node-version: 14
+      - name: install Snyk CLI
+        run: npm install -g snyk
+      - name: run Snyk Open Source Test
+        run: snyk test
+      - name: run Snyk Code Test
+        run: snyk code test
