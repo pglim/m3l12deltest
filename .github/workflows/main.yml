@@ -49,6 +49,10 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: run Snyk Open Source Test
+        run: snyk test
+      - name: run Snyk Code Test
+        run: snyk code test
         #Parameter:
          # Name: pglim360parameter
           #Type: String
@@ -57,11 +61,7 @@ jobs:
           #LastModifiedDate: 1692100383.712
           #ARN: arn:aws:ssm:ap-southeast-1:255945442255:parameter/pglim360parameter
           #DataType: text
-  Snykstep5:
-     - name: run Snyk Open Source Test
-        run: snyk test
-      - name: run Snyk Code Test
-        run: snyk code test
+
      # - name: Set up Node 14
       #  uses: actions/setup-node@v3
      #   with:
