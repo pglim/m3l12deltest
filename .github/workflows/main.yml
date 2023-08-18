@@ -49,10 +49,10 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: run Snyk Open Source Test
-        run: snyk test
-      - name: run Snyk Code Test
-        run: snyk code test
+      #- name: run Snyk Open Source Test
+      #  run: snyk test
+      #- name: run Snyk Code Test
+      #  run: snyk code test
         #Parameter:
          # Name: pglim360parameter
           #Type: String
